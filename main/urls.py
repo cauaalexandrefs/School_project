@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from locadora.views import index, locacao, filme
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('index/', index, name='index'),
+    path('lista_locacao/', locacao, name='locacao'),
+    path('lista_filmes/', filme, name='filme'),
 ]
